@@ -1,0 +1,394 @@
+/* O reset.css foi criado pela comunidade para resetar todas as configurações 
+O navegador cria o estilo para todas as tags que ele acha adequadas, então precisamos removê-lo, para que o estilo que criamos não seja influenciado pelo estilo que o navegador adiciona. */
+/* Com o position: absolute, eu consigo posicionar meu elemento em qualquer lugar da página. */
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/*Css da página de Produtos*/
+header {
+  background: #bbbbbb;
+  padding: 20px;
+}
+
+.caixa {
+  position: relative;
+  margin: 0 auto;
+  width: 940px;
+}
+
+nav {
+  position: absolute;
+  top: 110px;
+  right: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 0 0 15px;
+}
+
+nav a {
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #c78c19;
+  text-decoration: underline;
+}
+
+.produtos {
+  width: 940px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+/* Display inline-block : O tamanho pode ser ajustado, tanto na largura, quanto na altura.
+Na estrutura de "caixas" do CSS, a borda fica posicionada entre o padding e a margin. 
+Com a propriedade border-radius, podemos desenhar o canto arredondado dos elementos.*/
+.produtos li {
+  box-sizing: border-box;
+  /* border-color: #000000;
+     border-width: 2px;
+    border-style: solid; */
+  border: 2px solid #000000;
+  border-radius: 10px;
+  /* border-radius: 10px 20px 30px 40px */
+
+  display: inline-block;
+  margin: 0 1.5%;
+  padding: 30px 20px;
+  text-align: center;
+  vertical-align: top;
+  width: 30%;
+}
+
+/* No hover, mapeamos o comportamento do mouse por cima do elemento, e podemos usar isso para destacar visualmente o elemento em questão.
+Active, quando um elemento está sendo ativado pelo usuário */
+.produtos li:hover {
+  border-color: #c78c19;
+}
+
+.produtos li:hover h2 {
+  font-size: 34px;
+}
+
+.produtos li:active {
+  border-color: #088c19;
+}
+
+.produtos h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.produto-descricao {
+  font-size: 18px;
+}
+
+.produto-preco {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  background: url("./imagens/bg.jpg");
+  padding: 40px 0;
+}
+
+.copyright {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+@media screen and (max-width: 480px) {
+  .caixa,
+  .produtos,
+  .produtos li {
+    width: auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  nav {
+    position: static;
+  }
+
+  nav a {
+    font-size: 18px;
+  }
+
+  .produto-descricao,
+  .produto-preco,
+  .produtos li {
+    width: 100%;
+  }
+}
+
+/*Css da página de Contatos*/
+
+form {
+  margin: 40px 0;
+}
+
+form label,
+form legend {
+  display: block;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.input-padrao {
+  display: block;
+  margin: 0 0 20px;
+  padding: 10px 25px;
+  width: 50%;
+}
+
+.checkbox {
+  margin: 20px 0;
+}
+
+/* O seletor p.paragrafo é o mais forte, e a cor aplicada é a vermelha (red). */
+
+fieldset {
+  border: none;
+}
+
+.enviar {
+  background: orange;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px 0;
+  transition: 2s all;
+  cursor: pointer;
+  width: 40%;
+}
+
+/*  Utilizamos a propriedade transition para prover uma transição visual de um elemento. */
+
+/* Utilizamos a propriedade transform: scale() para aumentar um elemento proporcionalmente. */
+
+.enviar:hover {
+  background: darkgray;
+  transform: scale(1.2);
+  /* transform: rotate(70deg) scale(1.2); */
+}
+
+table {
+  margin: 20px 0 40px;
+ 
+}
+
+thead {
+  background: #555555;
+  color: white;
+  font-weight: bold;
+}
+
+td,
+th {
+  border: 1px solid #000000;
+  padding: 15px 8px;
+}
+
+@media screen and (max-width: 480px) {
+  .caixa {
+    width: auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  nav {
+    position: static;
+  }
+
+  nav a {
+    font-size: 18px;
+  }
+
+  form,
+  .enviar,
+  .checkbox,
+  table,
+  .input-padrao {
+    width: 100%;
+  }
+}
+
+/*css da página inicial*/
+
+.banner {
+  width: 100%;
+}
+
+.titulo-principal {
+  text-align: center;
+  font-size: 2em;
+  /*em é a unidade de medida do CSS, que é equivalente ao dobro do px base da página do CSS. */
+  margin: 0 0 1em;
+  clear: left;
+  /* color: rgb(0, 0, 0, 0.3); */
+}
+
+/* .titulo-principal:first-letter{
+    font-weight: bold;
+} */
+
+/* .titulo-principal::before{
+    content: "[";
+}
+
+.titulo-principal::after{
+    content: "]";
+} */
+
+/* p:first-line{
+    font-style: italic;
+} */
+
+.principal {
+  padding: 3em 0;
+  background: #fefefe;
+  width: 940px;
+  margin: 0 auto;
+}
+
+.principal p {
+  margin: 0 0 1em;
+}
+
+.principal strong {
+  font-weight: bold;
+}
+
+.principal em {
+  font-style: italic;
+}
+
+.imagem-utensilios {
+  float: left;
+  margin: 0 20px 20px 0;
+  width: 120px;
+  /* width: calc(40% - o valor que você quer) */
+}
+
+.mapa {
+  padding: 3em 0;
+  background: linear-gradient(#fefefe, #888888);
+}
+
+.mapa p {
+  margin: 0 0 2em;
+  text-align: center;
+}
+
+.mapa-conteudo {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.beneficios {
+  padding: 3em 0;
+  background: #888888;
+  /* box-shadow: inset 0 0 30px #FF0000; */
+}
+
+.conteudo-beneficios {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.lista-beneficios {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.itens {
+  line-height: 1.5em;
+}
+
+.itens:first-child {
+  font-weight: bold;
+}
+
+.itens::before {
+  content: "🟊";
+}
+
+/* .itens:nth-child(o numero do elemento - 2n - elementos pares)
+.itens:last-child */
+
+.imagem-beneficios {
+  width: 60%;
+  opacity: 1;
+  transition: 400ms;
+  box-shadow: 10px 10px 10px 0 #000000;
+  /* box-shadow: X Y blur sombra color
+  
+  box-shadow: 10px 10px 5px 20px  #000000, -10px -10px yellow, -20px 20px rgb(255, 0 ,0 , 0.5); */
+}
+
+.imagem-beneficios:hover {
+  opacity: 0.3;
+}
+
+/* Tanto o float:left quanto o float: right servem para que o elemento se destaque na tela, deixe de ocupar o espaço em que estava, para que os outros elementos possam se posicionar ao redor dele */
+
+.video {
+  width: 560px;
+  margin: 2em auto;
+}
+
+@media screen and (max-width: 480px) {
+  .caixa,
+  .principal,
+  .conteudo-beneficios,
+  .mapa-conteudo,
+  .video {
+    width: auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  nav {
+    position: static;
+  }
+
+  .lista-beneficios,
+  .imagem-beneficios {
+    width: 100%;
+  }
+}
+
+/* main > p {
+    background: #088c19;
+} seleciona o filho direto da main, não necessita colocar classe
+
+img + p {seleciona o próximo irmão}
+
+img ~ p {seleciona todos os seletores que estão ao lado do elemento img}
+  
+
+Seletor not, para acessar os elementos, exceto algum. Por exemplo, para acessar todos os p dentro de main, exceto o p que tem id missao:
+
+.principal p:not(#missão) {}
+
+*/
